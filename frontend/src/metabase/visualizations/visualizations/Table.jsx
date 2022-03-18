@@ -89,7 +89,7 @@ export default class Table extends Component {
       getHidden: ([{ card, data }]) => {
         const isPivoted = card.visualization_settings["table.pivot"];
         const numCols = data?.cols?.length;
-        return numCols !== 3 && !isPivoted;
+        return numCols < 3 && !isPivoted;
       },
       getDefault: ([{ card, data }]) =>
         data &&
