@@ -3,7 +3,7 @@ name: E2E Tests
 on:
   push:
     branches:
-      - 'master'
+      - 'e2e-experimental-no-log'
 
 jobs:
 
@@ -43,6 +43,7 @@ jobs:
       DISPLAY: ""
       QA_DB_ENABLED: true
       ENTERPRISE_TOKEN: ${{ secrets.ENTERPRISE_TOKEN }}
+      CYPRESS_NO_COMMAND_LOG: 1
     strategy:
       fail-fast: false
       matrix:
