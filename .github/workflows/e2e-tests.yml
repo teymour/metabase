@@ -43,7 +43,7 @@ jobs:
       DISPLAY: ""
       QA_DB_ENABLED: true
       ENTERPRISE_TOKEN: ${{ secrets.ENTERPRISE_TOKEN }}
-      burn: 3
+      burn: 10
     strategy:
       fail-fast: false
       matrix:
