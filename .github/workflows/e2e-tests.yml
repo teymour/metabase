@@ -3,7 +3,7 @@ name: E2E Tests
 on:
   push:
     branches:
-      - 'e2e-burn-embedding'
+      - 'e2e-burn-onboarding'
 
 jobs:
 
@@ -43,13 +43,13 @@ jobs:
       DISPLAY: ""
       QA_DB_ENABLED: true
       ENTERPRISE_TOKEN: ${{ secrets.ENTERPRISE_TOKEN }}
-      burn: 10
+      burn: 5
     strategy:
       fail-fast: false
       matrix:
         edition: [oss, ee]
         folder:
-          - "embedding"
+          - "onboarding"
     services:
       maildev:
         image: maildev/maildev
