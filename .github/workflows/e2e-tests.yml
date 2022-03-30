@@ -102,7 +102,7 @@ jobs:
         mv version.properties resources/
 
     - name: Run Cypress tests on ${{ matrix.folder }}
-      run: yarn run test-cypress-no-build --folder ${{ matrix.folder }}
+      run: yarn run test-cypress-no-build --spec "**/onboarding/**/*.spec.cy.js" --env burn=2
       env:
         TERM: xterm
     - name: Upload Cypress recording upon failure
