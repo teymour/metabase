@@ -125,7 +125,7 @@ function MainNavbarView({
         </SidebarLink>
       </ul>
       <ProfileLinkContainer>
-        <ProfileLink user={currentUser} />
+        <ProfileLink user={currentUser} handleCloseNavbar={onItemSelect} />
       </ProfileLinkContainer>
     </>
   );
