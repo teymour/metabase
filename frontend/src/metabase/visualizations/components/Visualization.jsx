@@ -211,6 +211,9 @@ export default class Visualization extends React.PureComponent {
     // TODO: push this logic into Question?
     const seriesIndex = clicked.seriesIndex || 0;
     const card = this.state.series[seriesIndex].card;
+    if (card.display === "object") {
+      return [];
+    }
     const question = this._getQuestionForCardCached(metadata, card);
     const mode = this.props.mode
       ? question && new Mode(question, this.props.mode)
