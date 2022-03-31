@@ -4,10 +4,10 @@ import {
   canAccessSettings,
   canAccessDataModel,
   canAccessDatabaseManagement,
+  getDataColumns,
 } from "./utils";
 
 import { getFeatureLevelDataPermissions } from "./permission-management";
-import { DATA_COLUMNS } from "./constants";
 
 if (hasPremiumFeature("advanced_permissions")) {
   PLUGIN_FEATURE_LEVEL_PERMISSIONS.canAccessSettings = canAccessSettings;
@@ -15,5 +15,5 @@ if (hasPremiumFeature("advanced_permissions")) {
   PLUGIN_FEATURE_LEVEL_PERMISSIONS.canAccessDatabaseManagement = canAccessDatabaseManagement;
 
   PLUGIN_FEATURE_LEVEL_PERMISSIONS.getFeatureLevelDataPermissions = getFeatureLevelDataPermissions;
-  PLUGIN_FEATURE_LEVEL_PERMISSIONS.dataColumns = DATA_COLUMNS;
+  PLUGIN_FEATURE_LEVEL_PERMISSIONS.getDataColumns = getDataColumns;
 }
